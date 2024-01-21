@@ -37,12 +37,5 @@ screen.mainloop()
 
 
 
-
-
-
-
-
-
-
 #from bvPlayer import bvPlayer
 #bvPlayer("assets/funny.mp4", draggable = True, fps = 28, dim = (800, 450), pos = (300,50))
