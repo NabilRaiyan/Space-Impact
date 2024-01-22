@@ -1,12 +1,14 @@
 import time
 from turtle import Screen
 from player import Player
+from enemy import Enemy
 
 screen = Screen()
 screen.listen()
 screen.tracer(0)
 
 player = Player()
+enemy = Enemy()
 
 screen.title("Space Impact")
 screen.setup(width=700, height=500)
@@ -28,6 +30,8 @@ while game_is_on:
     screen.onkey(key='s', fun=player.create_bullet)
 
     player.shoot()
+    enemy.create_enemy()
+    enemy.enemy_move()
 
 
 screen.mainloop()
