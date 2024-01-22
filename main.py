@@ -22,8 +22,7 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.01)
-    screen.onkey(key="Left", fun=player.move_left)
-    screen.onkey(key='Right', fun=player.mover_ight)
+
     screen.onkey(key="Up", fun=player.move_up)
     screen.onkey(key='Down', fun=player.move_down)
 
@@ -32,6 +31,8 @@ while game_is_on:
     player.shoot()
     enemy.create_enemy()
     enemy.enemy_move()
+    enemy.enemy_shoot()
+
 
 
 screen.mainloop()

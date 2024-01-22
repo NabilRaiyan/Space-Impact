@@ -23,3 +23,16 @@ class Enemy:
     def enemy_move(self):
         for enemy in self.enemy_list:
             enemy.forward(self.enemy_movement)
+
+    def enemy_bullet(self, x, y):
+        bullet = turtle.Turtle('square')
+        bullet.penup()
+        bullet.color('black')
+        bullet.shapesize(stretch_len=0.2, stretch_wid=0.1)
+        bullet.goto(x, y)
+        self.enemy_bullet_list.append(bullet)
+
+    def enemy_shoot(self):
+        for bullet in self.enemy_bullet_list:
+            bullet.setheading(180)
+            bullet.forward(10)

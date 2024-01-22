@@ -10,13 +10,6 @@ class Player:
         self.player.goto(-310, 0)
         self.movement_speed = 25
 
-    def mover_ight(self):
-        new_xcor_right = self.player.xcor() + self.movement_speed
-        self.player.goto(new_xcor_right, self.player.ycor())
-
-    def move_left(self):
-        new_xcor_left = self.player.xcor() - self.movement_speed
-        self.player.goto(new_xcor_left, self.player.ycor())
     def move_up(self):
         new_ycor_up = self.player.ycor() + self.movement_speed
         self.player.goto(self.player.xcor(), new_ycor_up)
