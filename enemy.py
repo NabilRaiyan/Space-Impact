@@ -8,6 +8,7 @@ class Enemy:
         self.enemy_bullet_list = []
         self.enemy_movement = 2
 
+    #creating enemy
     def create_enemy(self):
         if random.randint(1, 40) == 2:
             enemy = turtle.Turtle()
@@ -22,10 +23,12 @@ class Enemy:
 
             self.enemy_bullet(enemy.xcor(), enemy.ycor())
 
+    # creating enemy movement
     def enemy_move(self):
         for enemy in self.enemy_list:
             enemy.forward(self.enemy_movement)
 
+    # creating enemy bullet
     def enemy_bullet(self, x, y):
         bullet = turtle.Turtle('square')
         bullet.penup()
