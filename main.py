@@ -3,6 +3,7 @@ from turtle import Screen
 from player import Player
 from enemy import Enemy
 
+# creating screen, player, enemy objects
 screen = Screen()
 screen.listen()
 screen.tracer(0)
@@ -10,6 +11,7 @@ screen.tracer(0)
 player = Player()
 enemy = Enemy()
 
+# setting up the screen
 screen.title("Space Impact")
 screen.setup(width=700, height=500)
 screen.bgcolor("#7A9E81")
