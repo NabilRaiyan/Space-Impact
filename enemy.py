@@ -20,6 +20,8 @@ class Enemy:
             enemy.goto(x_position -10, random_y + 10)
             self.enemy_list.append(enemy)
 
+            self.enemy_bullet(enemy.xcor(), enemy.ycor())
+
     def enemy_move(self):
         for enemy in self.enemy_list:
             enemy.forward(self.enemy_movement)
@@ -35,4 +37,4 @@ class Enemy:
     def enemy_shoot(self):
         for bullet in self.enemy_bullet_list:
             bullet.setheading(180)
-            bullet.forward(10)
+            bullet.forward(3)
