@@ -1,7 +1,7 @@
 import turtle
 import random
 
-
+# enemy class
 class Enemy:
     def __init__(self):
         self.enemy_list = []
