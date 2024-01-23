@@ -31,6 +31,7 @@ while game_is_on:
     screen.onkey(key='s', fun=player.create_bullet)
 
     player.shoot()
+
     enemy.create_enemy()
     enemy.enemy_move()
     enemy.enemy_shoot()

@@ -7,21 +7,27 @@ class Enemy:
         self.enemy_list = []
         self.enemy_bullet_list = []
         self.enemy_movement = 2
+        self.enemy_count = 0
+        self.totalEnemy = 20
+        #self.isEnemyCreating = True
 
     #creating enemy
     def create_enemy(self):
-        if random.randint(1, 40) == 2:
-            enemy = turtle.Turtle()
-            turtle.register_shape('assets/enemy.gif')
-            enemy.shape('assets/enemy.gif')
-            enemy.setheading(180)
-            enemy.penup()
-            x_position = 500
-            random_y = random.randint(-50, 200)
-            enemy.goto(x_position -10, random_y + 10)
-            self.enemy_list.append(enemy)
-
-            self.enemy_bullet(enemy.xcor(), enemy.ycor())
+            if self.totalEnemy > self.enemy_count:
+                if random.randint(1, 40) == 2:
+                    enemy = turtle.Turtle()
+                    turtle.register_shape('assets/enemy.gif')
+                    enemy.shape('assets/enemy.gif')
+                    enemy.setheading(180)
+                    enemy.penup()
+                    x_position = 500
+                    random_y = random.randint(-50, 200)
+                    enemy.goto(x_position - 10, random_y + 10)
+                    self.enemy_list.append(enemy)
+                    self.enemy_count += 1
+                    # creating enemy bullet
+                    self.enemy_bullet(enemy.xcor(), enemy.ycor())
+                    print(self.enemy_count)
 
     # creating enemy movement
     def enemy_move(self):
