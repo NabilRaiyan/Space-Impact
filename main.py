@@ -1,4 +1,5 @@
 import time
+import turtle
 from turtle import Screen
 from player import Player
 from enemy import Enemy
@@ -13,6 +14,8 @@ player = Player()
 enemy = Enemy()
 
 boss = Boss()
+turtle.ontimer(boss.auto_shoot, 2000)  # Start the auto-shoot after 2000 milliseconds (2 seconds)
+
 # setting up the screen
 screen.title("Space Impact")
 screen.setup(width=700, height=500)
@@ -37,8 +40,10 @@ while game_is_on:
     enemy.create_enemy()
     enemy.enemy_move()
     enemy.enemy_shoot()
-    if enemy.enemy_count == 20:
+    if enemy.enemy_count == 5:
         boss.boss_move()
+        boss.boss_shoot()
+
 
 
 

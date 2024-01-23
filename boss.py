@@ -7,74 +7,41 @@ STARTING_POSITION = (400, 0)
 
 class Boss:
     def __init__(self):
+        self.boss_bullet_list = []
         self.boss = turtle.Turtle()
         turtle.register_shape('assets/boss1.gif')
         self.boss.shape('assets/boss1.gif')
         self.boss.penup()
         self.boss.setheading(SET_HEADING)
         self.boss.goto(STARTING_POSITION)
-        self.y_move = 100
-        self.boss_current_pos_y = self.boss.ycor()
+        self.y_move = 16
+
 
 
     def boss_move(self):
         self.boss.forward(MOVEMENT_SPEED)
         if self.boss.xcor() < FINISHING_LINE_X:
             self.boss.goto(FINISHING_LINE_X, 0)
+    def boss_bullet(self, x, y):
+        bullet = turtle.Turtle('square')
+        bullet.penup()
+        bullet.color('black')
+        bullet.shapesize(stretch_len=0.2, stretch_wid=0.1)
+        bullet.goto(x, y)
+        self.boss_bullet_list.append(bullet)
+
+
+    def boss_shoot(self):
+        for bullet in self.boss_bullet_list:
+            bullet.setheading(180)
+            bullet.forward(3)
+
+    def auto_shoot(self):
+        self.boss_bullet(self.boss.xcor() - 10, self.boss.ycor())
+        turtle.ontimer(self.auto_shoot, 1000)  # Auto shoot every 1000 milliseconds (1 seconds)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# STARTING_POSITION = (300, 0)
-# MOVEMENT_DISTANCE = 2
-# FINISHING_LINE_X = 250
-# SET_HEADING = 180
-# class Boss:
-#     def __init__(self):
-#         self.boss = turtle.Turtle()
-#         turtle.register_shape('assets/boss1.gif')
-#         self.boss.shape('assets/boss1.gif')
-#         self.boss.penup()
-#         self.boss.setheading(SET_HEADING)
-#         self.boss.goto(STARTING_POSITION)
-#
-#     def boss_move(self):
-#         self.boss.forward(MOVEMENT_DISTANCE)
-#         if self.boss.xcor() < FINISHING_LINE_X:
-#             self.boss.goto(FINISHING_LINE_X, 0)
 
 
 
