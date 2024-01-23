@@ -18,10 +18,12 @@ class Boss:
 
 
 
+
     def boss_move(self):
         self.boss.forward(MOVEMENT_SPEED)
         if self.boss.xcor() < FINISHING_LINE_X:
             self.boss.goto(FINISHING_LINE_X, 0)
+
     def boss_bullet(self, x, y):
         bullet = turtle.Turtle('square')
         bullet.penup()
