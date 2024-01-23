@@ -15,7 +15,7 @@ player = Player()
 enemy = Enemy()
 boss = Boss()
 level = Level()
-turtle.ontimer(boss.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds ( seconds)
+turtle.ontimer(boss.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds (1 seconds)
 
 # setting up the screen
 screen.title("Space Impact")
