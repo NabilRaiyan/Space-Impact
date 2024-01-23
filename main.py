@@ -2,6 +2,7 @@ import time
 from turtle import Screen
 from player import Player
 from enemy import Enemy
+from boss import Boss
 
 # creating screen, player, enemy objects
 screen = Screen()
@@ -11,6 +12,7 @@ screen.tracer(0)
 player = Player()
 enemy = Enemy()
 
+boss = Boss()
 # setting up the screen
 screen.title("Space Impact")
 screen.setup(width=700, height=500)
@@ -22,8 +24,8 @@ game_is_on = True
 
 
 while game_is_on:
-    screen.update()
     time.sleep(0.01)
+    screen.update()
 
     screen.onkey(key="Up", fun=player.move_up)
     screen.onkey(key='Down', fun=player.move_down)
@@ -35,6 +37,14 @@ while game_is_on:
     enemy.create_enemy()
     enemy.enemy_move()
     enemy.enemy_shoot()
+    if enemy.enemy_count == 20:
+        boss.boss_move()
+
+
+
+
+
+
 
 
 

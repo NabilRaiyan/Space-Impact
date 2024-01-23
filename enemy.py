@@ -9,7 +9,6 @@ class Enemy:
         self.enemy_movement = 2
         self.enemy_count = 0
         self.totalEnemy = 20
-        #self.isEnemyCreating = True
 
     #creating enemy
     def create_enemy(self):
