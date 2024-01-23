@@ -28,7 +28,7 @@ class Boss:
         bullet = turtle.Turtle('square')
         bullet.penup()
         bullet.color('black')
-        bullet.shapesize(stretch_len=0.2, stretch_wid=0.1)
+        bullet.shapesize(stretch_len=0.3, stretch_wid=0.2)
         bullet.goto(x, y)
         self.boss_bullet_list.append(bullet)
 

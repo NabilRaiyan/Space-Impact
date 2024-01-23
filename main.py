@@ -20,12 +20,12 @@ turtle.ontimer(boss.auto_shoot, 1000)  # Start the auto-shoot after 1000 millise
 # setting up the screen
 screen.title("Space Impact")
 screen.setup(width=700, height=500)
-screen.bgcolor("#7A9E81")
+screen.bgcolor("#93BD9C")
 
 
 game_is_on = True
 game_level = 3
-if game_level == 1:
+if game_level == 3:
     level.create_level('assets/level_1-bg.gif')
 
 
@@ -45,11 +45,12 @@ while game_is_on:
     elif game_level == 2:
         enemy.create_enemy('assets/enemy2.gif')
     elif game_level == 3:
-        enemy.create_enemy('assets/enemy1.gif')
+        enemy.create_enemy('assets/enemy3.gif')
         enemy.create_enemy('assets/enemy2.gif')
+        enemy.create_enemy('assets/enemy1.gif')
     enemy.enemy_move()
     enemy.enemy_shoot()
-    if enemy.enemy_count == 5:
+    if enemy.enemy_count == 10:
         boss.boss_move()
         boss.boss_shoot()
 
