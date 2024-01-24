@@ -97,6 +97,8 @@ while game_is_on:
             elif players.player_hit_count == 6:
                 health.remove_health()
                 score.reset()
+                game_is_on = False
+                score.game_over()
 
 
 
@@ -113,6 +115,8 @@ while game_is_on:
             elif players.player_hit_count == 6:
                 health.remove_health()
                 score.reset()
+                game_is_on = False
+                score.game_over()
 
 
 
