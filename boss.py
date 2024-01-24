@@ -6,15 +6,18 @@ MOVEMENT_SPEED = 1
 STARTING_POSITION = (400, 0)
 
 class Boss:
-    def __init__(self):
+    def __init__(self, boss_img):
         self.boss_bullet_list = []
         self.boss = turtle.Turtle()
-        turtle.register_shape('assets/boss2.gif')
-        self.boss.shape('assets/boss2.gif')
+        turtle.register_shape(boss_img)
+        self.boss.shape(boss_img)
         self.boss.penup()
         self.boss.setheading(SET_HEADING)
         self.boss.goto(STARTING_POSITION)
         self.y_move = 16
+
+
+
 
 
 

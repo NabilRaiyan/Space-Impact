@@ -9,6 +9,7 @@ class Player:
         self.player.penup()
         self.player.goto(-310, 0)
         self.movement_speed = 25
+        self.player_hit_count = 0
 
     def move_up(self):
         new_ycor_up = self.player.ycor() + self.movement_speed
