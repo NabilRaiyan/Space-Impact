@@ -5,6 +5,7 @@ FONT = ("Comic sans", 20, 'bold')
 class Level:
     def __init__(self):
         self.level_position = (0, -160)
+        self.level = 1
     def create_level(self, level_img):
         bg_1 = turtle.Turtle()
         turtle.register_shape(level_img)

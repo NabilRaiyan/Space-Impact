@@ -9,7 +9,7 @@ from scoreboardAndLevel import Level
 from health import Health
 import math
 
-game_level = 1
+game_level = 3
 
 # creating screen, player, enemy objects
 screen = Screen()
@@ -37,7 +37,7 @@ screen.bgcolor("#81BB7A")
 
 
 game_is_on = True
-if game_level == 1:
+if game_level == 3:
     level.create_level('assets/bg.gif')
 
 
