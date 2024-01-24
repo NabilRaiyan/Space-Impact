@@ -1,6 +1,6 @@
 import turtle
 from turtle import Turtle
-FONT = ("Comic sans", 30, 'bold')
+FONT = ("Comic sans", 20, 'bold')
 
 class Level:
     def __init__(self):
@@ -16,17 +16,28 @@ class Level:
 
 class ScoreBoard(Turtle):
     def __init__(self):
+        with open("data.txt") as data_file:
+            high_score = int(data_file.read())
         super().__init__()
         self.hideturtle()
         self.penup()
         self.color("black")
-        self.goto(250, 200)
+        self.goto(200, 200)
+        self.score = 0
+        self.high_score = high_score
+        self.update_score()
+
+    def reset(self):
+        if self.score > self.high_score:
+            with open("data.txt", mode="w") as data_file:
+                data_file.write(str(self.score))
+            self.high_score = self.score
         self.score = 0
         self.update_score()
 
     def update_score(self):
         self.clear()
-        self.write(f'000{self.score}', align='center', font=FONT)
+        self.write(f'000{self.score}  High Score: {self.high_score}', align='center', font=FONT)
 
     def increase_score(self):
         self.score += 1

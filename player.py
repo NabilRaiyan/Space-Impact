@@ -7,9 +7,10 @@ class Player:
         turtle.register_shape('assets/player.gif')
         self.player.shape("assets/player.gif")
         self.player.penup()
-        self.player.goto(-310, 0)
+        self.player.goto(-300, 0)
         self.movement_speed = 25
         self.player_hit_count = 0
+        print(self.player_hit_count)
 
     def move_up(self):
         new_ycor_up = self.player.ycor() + self.movement_speed

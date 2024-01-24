@@ -1,4 +1,3 @@
-from turtle import Turtle
 import turtle
 
 class Health:
@@ -7,6 +6,8 @@ class Health:
         self.health_list = []
         for i in range(3):
             self.create_health(-300 + i*30, 220)
+        print(self.health_list)
+
 
     def create_health(self, x, y):
         health = turtle.Turtle()
@@ -15,7 +16,13 @@ class Health:
         health.penup()
         health.goto(x, y)
         self.health_list.append(health)
-        print(self.health_list)
+
+    def remove_health(self):
+        if self.health_count > 0:
+            self.health_count -= 1
+            health_to_remove = self.health_list.pop()
+            health_to_remove.hideturtle()
+            print("Player got hit! Remaining health:", self.health_count)
 
 
 
