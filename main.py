@@ -176,6 +176,7 @@ def draw_game_element():
                     game_is_on = False
                     score.game_over()
 
+        # detect collsision between boss and player bullet
         for bullet in players.bullets_list:
             if is_collision(boss1.boss, bullet, 5, 24):
                 boss1.boss_hit_count += 1
