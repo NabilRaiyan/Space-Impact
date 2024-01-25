@@ -104,9 +104,9 @@ def draw_game_element():
             boss1.boss_move()
             boss1.boss_shoot()
 
-        # elif score.score > 20 and game_level == 2:
-        #     boss.boss_move()
-        #     boss.boss_shoot()
+        elif score.score > 20 and game_level == 2:
+            boss1.boss_move()
+            boss1.boss_shoot()
 
 
         # detecting collision with player bullet and enemy
@@ -189,6 +189,7 @@ def draw_game_element():
                     boss1.boss_bullet_list.clear()
                     boss1.boss.hideturtle()
                     game_level = 2
+                    boss1.boss_hit_count = 0
 
 
 if game_level == 1:
@@ -196,7 +197,9 @@ if game_level == 1:
     boss1 = Boss(boss_img)
     turtle.ontimer(boss1.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds (1 second)
 elif game_level == 2:
-    boss_img = 'assets/boss2.gif'
+    boss_img1 = 'assets/boss2.gif'
+    boss1 = Boss(boss_img1)
+    turtle.ontimer(boss1.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds (1 second)
 
 
 # setting up the screen
