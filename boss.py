@@ -17,12 +17,6 @@ class Boss:
         self.y_move = 16
         self.boss_hit_count = 0
 
-
-
-
-
-
-
     def boss_move(self):
         self.boss.forward(MOVEMENT_SPEED)
         if self.boss.xcor() < FINISHING_LINE_X:

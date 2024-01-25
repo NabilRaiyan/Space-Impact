@@ -10,9 +10,9 @@ from health import Health
 import math
 import os
 
+# initial game level
 game_level = 1
 
-# creating screen, player, enemy objects
 screen = Screen()
 screen.listen()
 screen.tracer(0)
@@ -24,8 +24,6 @@ menu_pen = None
 
 
 # Function to draw menu options
-
-
 def draw_menu():
     global menu_pen
     menu_pen = Turtle()
@@ -71,6 +69,7 @@ def draw_game_element():
     health = Health()
     level.create_level('assets/bg.gif')
 
+    # game on loop
     while game_is_on:
         time.sleep(0.01)
         screen.update()
@@ -102,11 +101,13 @@ def draw_game_element():
             # for e in enemy.enemy_list:
             #     e.hideturtle()
             # enemy.enemy_list.clear()
+            boss1.boss_move()
+            boss1.boss_shoot()
 
-            boss.boss_move()
-            boss.boss_shoot()
-        elif score.score > 20 and game_level == 2:
-            boss.boss_move()
+        # elif score.score > 20 and game_level == 2:
+        #     boss.boss_move()
+        #     boss.boss_shoot()
+
 
         # detecting collision with player bullet and enemy
         for bullet in players.bullets_list:
@@ -117,9 +118,6 @@ def draw_game_element():
                     players.bullets_list.remove(bullet)
                     bullet.hideturtle()
                     score.increase_score()
-
-
-
 
 
         # Function to check if there is a collision between two turtles
@@ -145,10 +143,10 @@ def draw_game_element():
                     score.game_over()
 
             # detect collision with boss bullet and player
-            for boss_bullet in boss.boss_bullet_list:
+            for boss_bullet in boss1.boss_bullet_list:
                 if boss_bullet.distance(players.player) < 10:
                     boss_bullet.hideturtle()
-                    boss.boss_bullet_list.remove(boss_bullet)
+                    boss1.boss_bullet_list.remove(boss_bullet)
                     players.player_hit_count += 1
                     print(players.player_hit_count)
                     if players.player_hit_count == 2:
@@ -179,25 +177,27 @@ def draw_game_element():
                     score.game_over()
 
         for bullet in players.bullets_list:
-            if is_collision(bullet, boss.boss, 5, 24):
-                boss.boss_hit_count += 1
+            if is_collision(boss1.boss, bullet, 5, 24):
+                boss1.boss_hit_count += 1
                 score.score += 1
-                print(f'Boss hit count {boss.boss_hit_count}')
-                if boss.boss_hit_count > 100:
-                    boss.boss.clear()
-                    boss.boss_bullet_list.clear()
-                    for bullet in boss.boss_bullet_list:
-                        bullet.hideturtle()
-                    boss.boss.hideturtle()
+                print(f'Boss hit count {boss1.boss_hit_count}')
+                if boss1.boss_hit_count > 20:
+                    boss1.boss.clear()
+                    for bullet_boss in boss1.boss_bullet_list:
+                        bullet_boss.hideturtle()
+                    boss1.boss_bullet_list.clear()
+                    boss1.boss.hideturtle()
                     game_level = 2
 
 
 if game_level == 1:
     boss_img = 'assets/boss1.gif'
+    boss1 = Boss(boss_img)
+    turtle.ontimer(boss1.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds (1 second)
 elif game_level == 2:
     boss_img = 'assets/boss2.gif'
-boss = Boss(boss_img)
-turtle.ontimer(boss.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds (1 second)
+
+
 
 # setting up the screen
 screen.title("Space Impact")
