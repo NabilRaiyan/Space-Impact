@@ -198,7 +198,6 @@ elif game_level == 2:
     boss_img = 'assets/boss2.gif'
 
 
-
 # setting up the screen
 screen.title("Space Impact")
 screen.setup(width=700, height=500)
