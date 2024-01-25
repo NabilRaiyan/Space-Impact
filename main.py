@@ -18,13 +18,11 @@ screen.tracer(0)
 
 game_is_on = False
 show_menu = True
-
-
-
-
+menu_pen = None
 
 # Function to draw menu options
 def draw_menu():
+    global menu_pen
     menu_pen = Turtle()
     menu_pen.hideturtle()
     menu_pen.clear()
@@ -36,14 +34,18 @@ def draw_menu():
     menu_pen.goto(0, 20)
     menu_pen.write("3. Exit", align="center", font=("Arial", 16, 'bold'))
 
-
+def hide_menu():
+    global menu_pen
+    if menu_pen is not None:
+        menu_pen.clear()
 
 # Function to handle mouse clicks
 def handle_click(x, y):
-    global game_is_on, show_menu
+    global game_is_on, show_menu, menu_pen
     if show_menu:
         if 40 < y < 70:  # Start New Game
             show_menu = False
+            hide_menu()
             game_is_on = True
             draw_game_element()
         elif 10 < y < 30:  # Exit
@@ -51,6 +53,7 @@ def handle_click(x, y):
 
 def draw_game_element():
     global game_is_on
+    global show_menu
 
     players = Player()
     enemy = Enemy()
