@@ -21,6 +21,8 @@ show_menu = True
 menu_pen = None
 
 # Function to draw menu options
+
+
 def draw_menu():
     global menu_pen
     menu_pen = Turtle()
@@ -34,13 +36,15 @@ def draw_menu():
     menu_pen.goto(0, 20)
     menu_pen.write("3. Exit", align="center", font=("Arial", 16, 'bold'))
 
+# Hide menu options
 def hide_menu():
     global menu_pen
     if menu_pen is not None:
         menu_pen.clear()
 
+
 # Function to handle mouse clicks
-def handle_click(x, y):
+def handle_click(y):
     global game_is_on, show_menu, menu_pen
     if show_menu:
         if 40 < y < 70:  # Start New Game
@@ -48,9 +52,10 @@ def handle_click(x, y):
             hide_menu()
             game_is_on = True
             draw_game_element()
-        elif 10 < y < 30:  # Exit
+        elif 10 < y < 30:  # Exit Game
             screen.bye()
 
+# drawing game elements
 def draw_game_element():
     global game_is_on
     global show_menu
@@ -139,7 +144,7 @@ if game_level == 1:
 elif game_level == 2:
     boss = Boss('assets/boss2.gif')
 
-    turtle.ontimer(boss.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds (1 seconds)
+    turtle.ontimer(boss.auto_shoot, 1000)  # Start the auto-shoot after 1000 milliseconds (1 second)
 
 # setting up the screen
 screen.title("Space Impact")
@@ -150,11 +155,3 @@ screen.bgcolor("#81BB7A")
 draw_menu()
 screen.onclick(handle_click)
 screen.mainloop()
-
-
-
-
-
-
-#from bvPlayer import bvPlayer
-#bvPlayer("assets/funny.mp4", draggable = True, fps = 28, dim = (800, 450), pos = (300,50))
