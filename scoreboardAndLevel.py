@@ -48,3 +48,4 @@ class ScoreBoard(Turtle):
         self.goto(0, 0)
         self.write(f"GAME OVER", align='center', font=FONT)
 
+

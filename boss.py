@@ -15,6 +15,7 @@ class Boss:
         self.boss.setheading(SET_HEADING)
         self.boss.goto(STARTING_POSITION)
         self.y_move = 16
+        self.boss_hit_count = 0
 
 
 

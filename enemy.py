@@ -26,7 +26,7 @@ class Enemy:
                 self.enemy_count += 1
                 # creating enemy bullet
                 self.enemy_bullet(enemy.xcor(), enemy.ycor())
-                #print(self.enemy_count)
+                print(self.enemy_count)
 
     # creating enemy movement
     def enemy_move(self):
