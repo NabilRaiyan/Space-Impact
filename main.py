@@ -120,7 +120,7 @@ def draw_game_element():
                     score.increase_score()
 
 
-        # Function to check if there is a collision between two turtles
+        # Function to check if there is a collision between two game object
         def is_collision(t1, t2, radius1, radius2):
             distance = math.sqrt((t1.xcor() - t2.xcor()) ** 2 + (t1.ycor() - t2.ycor()) ** 2)
             return distance < (radius1 + radius2)
