@@ -8,7 +8,6 @@ from scoreboardAndLevel import ScoreBoard
 from scoreboardAndLevel import Level
 from health import Health
 import math
-import os
 
 # initial game level
 game_level = 1

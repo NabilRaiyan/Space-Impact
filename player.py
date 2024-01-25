@@ -1,4 +1,7 @@
 import turtle
+
+
+
 class Player:
     def __init__(self):
 
@@ -27,6 +30,8 @@ class Player:
         bullet.color('black')
         bullet.goto(self.player.xcor(), self.player.ycor())
         self.bullets_list.append(bullet)
+
+
 
     def shoot(self):
         for bullet in self.bullets_list:
