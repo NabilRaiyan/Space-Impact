@@ -39,9 +39,5 @@ Git Clone: https://github.com/NabilRaiyan/Space-Impact.git
 
 ## Screenshots
 
-(Add screenshots of your game here)
-
-
-
-
+<img width="722" alt="Screenshot 2024-01-27 at 9 53 50 PM" src="https://github.com/NabilRaiyan/Space-Impact/assets/31074461/8f997ba5-3b5a-4f74-9c0a-878899a7e3f7">
 
