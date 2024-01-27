@@ -38,6 +38,10 @@ Git Clone: https://github.com/NabilRaiyan/Space-Impact.git
 - **'s' Key:** Shoot bullets at enemy ships
 
 ## Screenshots
+<img width="693" alt="Screenshot 2024-01-27 at 10 16 27 PM" src="https://github.com/NabilRaiyan/Space-Impact/assets/31074461/6aa6f23f-dc90-426d-a6f3-b4d4dd63e577">
 
-<img width="722" alt="Screenshot 2024-01-27 at 9 53 50 PM" src="https://github.com/NabilRaiyan/Space-Impact/assets/31074461/8f997ba5-3b5a-4f74-9c0a-878899a7e3f7">
+<img width="686" alt="Screenshot 2024-01-27 at 10 26 02 PM" src="https://github.com/NabilRaiyan/Space-Impact/assets/31074461/6ccc25ea-3907-49e4-b35d-f7548579bc01">
+
+<img width="687" alt="Screenshot 2024-01-27 at 10 27 59 PM" src="https://github.com/NabilRaiyan/Space-Impact/assets/31074461/9fd74866-a4b8-4d93-a090-685eb6daf2a0">
+
 
