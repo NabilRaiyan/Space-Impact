@@ -23,6 +23,16 @@ screen.tracer(0)
 game_is_on = False
 show_menu = True
 menu_pen = None
+FONT = ("Comic sans", 20, 'bold')
+
+def current_level():
+    cr_level = Turtle()
+    cr_level.hideturtle()
+    cr_level.penup()
+    cr_level.color('black')
+    cr_level.goto(0, 200)
+    cr_level.clear()
+    cr_level.write(f'Level: {game_level}', align='center', font=FONT)
 
 
 
@@ -36,9 +46,9 @@ def draw_menu():
     menu_pen.goto(0, 100)
     menu_pen.write("Space Impact", align="center", font=("Arial", 24, "bold"))
     menu_pen.goto(0, 50)
-    menu_pen.write("1. Start New Game", align="center", font=("Arial", 16, 'bold'))
+    menu_pen.write(" Start New Game", align="center", font=("Arial", 16, 'bold'))
     menu_pen.goto(0, 20)
-    menu_pen.write("3. Exit", align="center", font=("Arial", 16, 'bold'))
+    menu_pen.write(" Exit", align="center", font=("Arial", 16, 'bold'))
 
 # Hide menu options
 def hide_menu():
@@ -71,6 +81,7 @@ def draw_game_element():
     score = ScoreBoard()
     health = Health()
     level.create_level('assets/bg.gif')
+    current_level()
 
     # game on loop
     while game_is_on:
@@ -191,7 +202,7 @@ def draw_game_element():
                         bullet_boss.hideturtle()
                     boss1.boss_bullet_list.clear()
                     boss1.boss.hideturtle()
-                    game_level = 2
+                    game_level += 1
                     boss1.boss_hit_count = 0
 
 
