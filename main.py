@@ -4,7 +4,6 @@
 
 
 
-
 import time
 import turtle
 from turtle import Screen, Turtle
