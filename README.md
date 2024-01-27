@@ -27,3 +27,18 @@ After each level, there is a boss fight where the player faces a tougher enemy.
 3. Navigate to the directory where the repository is cloned.
 4. Run the game using the following command:
 
+
+## Controls
+
+- **Up Arrow:** Move the spaceship up
+- **Down Arrow:** Move the spaceship down
+- **'s' Key:** Shoot bullets at enemy ships
+
+## Screenshots
+
+(Add screenshots of your game here)
+
+
+
+
+
