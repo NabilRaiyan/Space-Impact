@@ -25,6 +25,9 @@ After each level, there is a boss fight where the player faces a tougher enemy.
 1. Clone this repository to your local machine.
 2. Make sure you have Python installed.
 3. Navigate to the directory where the repository is cloned.
+```bash
+Git Clone: https://github.com/NabilRaiyan/Space-Impact.git
+```
 4. Run the game using the following command:
 
 
