@@ -1,19 +1,29 @@
 # Nokia's 3310 Space Impact Game
 
-This is a Space Impact game inspired by Nokia's classic 3310 mobile phone game, implemented in Python using the Turtle graphics module.
+This is a Python implementation of the classic Nokia 3310 Space Impact game using the Turtle graphics module.
+
+## Gameplay
+
+In this game, the player controls a spaceship and navigates through space, encountering enemy ships along the way. The player can move the spaceship up and down using the up and down arrow keys respectively. The player can shoot bullets at the enemy ships using the 's' key on the keyboard.
+
+After each level, there is a boss fight where the player faces a tougher enemy.
 
 ## Features
 
-- The player can move up and down using the up and down arrow keys.
-- The player can shoot enemies using the 's' key.
-- Each level ends with a boss fight.
-- There are 3 levels in total
+- Classic gameplay reminiscent of Nokia's 3310 Space Impact.
+- Simple controls: up and down arrow keys to move, 's' key to shoot.
+- Increasing difficulty with each level.
+- Boss fights after every level.
 
-## Installation
+## Requirements
 
-1. Clone the repository:
+- Python 3.x
+- Turtle graphics module (usually comes pre-installed with Python)
 
-```bash
-git clone: https://github.com/NabilRaiyan/Space-Impact.git
+## How to Play
 
-2. Navigate to the project directory:
+1. Clone this repository to your local machine.
+2. Make sure you have Python installed.
+3. Navigate to the directory where the repository is cloned.
+4. Run the game using the following command:
+
