@@ -15,3 +15,5 @@ This is a Space Impact game inspired by Nokia's classic 3310 mobile phone game, 
 
 ```bash
 git clone: https://github.com/NabilRaiyan/Space-Impact.git
+
+2. Navigate to the project directory:
