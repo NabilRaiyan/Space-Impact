@@ -9,7 +9,6 @@ In this game, the player controls a spaceship and navigates through space, encou
 After each level, there is a boss fight where the player faces a tougher enemy.
 
 ## Features
-
 - Classic gameplay reminiscent of Nokia's 3310 Space Impact.
 - Simple controls: up and down arrow keys to move, 's' key to shoot.
 - Increasing difficulty with each level.
