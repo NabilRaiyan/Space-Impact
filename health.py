@@ -6,7 +6,6 @@ class Health:
         self.health_list = []
         for i in range(3):
             self.create_health(-300 + i*30, 220)
-        print(self.health_list)
 
     # create health
     def create_health(self, x, y):
@@ -23,7 +22,6 @@ class Health:
             self.health_count -= 1
             health_to_remove = self.health_list.pop()
             health_to_remove.hideturtle()
-            print("Player got hit! Remaining health:", self.health_count)
 
 
 

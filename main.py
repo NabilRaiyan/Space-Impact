@@ -153,7 +153,6 @@ def draw_game_element():
                 bullet.hideturtle()
                 enemy.enemy_bullet_list.remove(bullet)
                 players.player_hit_count += 1
-                print(players.player_hit_count)
                 if players.player_hit_count == 2:
                     health.remove_health()
                 elif players.player_hit_count == 4:
@@ -170,7 +169,6 @@ def draw_game_element():
                     boss_bullet.hideturtle()
                     boss1.boss_bullet_list.remove(boss_bullet)
                     players.player_hit_count += 1
-                    print(players.player_hit_count)
                     if players.player_hit_count == 2:
                         health.remove_health()
                     elif players.player_hit_count == 4:
@@ -203,7 +201,6 @@ def draw_game_element():
             if is_collision(boss1.boss, bullet, 5, 24):
                 boss1.boss_hit_count += 1
                 score.score += 1
-                print(f'Boss hit count {boss1.boss_hit_count}')
                 if boss1.boss_hit_count > 100:
                     boss1.boss.clear()
                     for bullet_boss in boss1.boss_bullet_list:

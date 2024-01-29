@@ -38,7 +38,7 @@ class Boss:
 
     def auto_shoot(self):
         self.boss_bullet(self.boss.xcor() - 10, self.boss.ycor())
-        turtle.ontimer(self.auto_shoot, 1000)  # Auto shoot every 1000 milliseconds (1 seconds)
+        turtle.ontimer(self.auto_shoot, 1000)  # Auto shoot every 1000 milliseconds (1 second)
 
 
 
