@@ -1,5 +1,6 @@
 import turtle
-
+import pygame
+import os
 
 
 class Player:
@@ -23,12 +24,19 @@ class Player:
         new_ycor_down = self.player.ycor() - self.movement_speed
         self.player.goto(self.player.xcor(), new_ycor_down)
 
+    def play_sound(self, file_path):
+        pygame.mixer.init()
+        sound = pygame.mixer.Sound(file_path)
+        sound.play()
+
     def create_bullet(self):
         bullet = turtle.Turtle('square')
         bullet.shapesize(stretch_len=0.2, stretch_wid=0.1)
         bullet.penup()
         bullet.color('black')
         bullet.goto(self.player.xcor(), self.player.ycor())
+        self.play_sound('sounds/shoot_sound.WAV')
+
         self.bullets_list.append(bullet)
 
 
@@ -36,3 +44,4 @@ class Player:
     def shoot(self):
         for bullet in self.bullets_list:
             bullet.forward(20)
+

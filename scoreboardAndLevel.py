@@ -14,9 +14,6 @@ class Level:
         bg_1.goto(self.level_position)
 
 
-
-
-
 class ScoreBoard(Turtle):
     def __init__(self):
         with open("data.txt") as data_file:

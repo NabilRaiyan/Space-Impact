@@ -111,14 +111,14 @@ def draw_game_element():
             enemy.create_enemy(enemy_img)
         enemy.enemy_move()
         enemy.enemy_shoot()
-        if score.score > 10 and game_level == 1:
+        if score.score > 100 and game_level == 1:
             # for e in enemy.enemy_list:
             #     e.hideturtle()
             # enemy.enemy_list.clear()
             boss1.boss_move()
             boss1.boss_shoot()
 
-        elif score.score > 20 and game_level == 2:
+        elif score.score > 200 and game_level == 2:
             boss1.boss_move()
             boss1.boss_shoot()
 
