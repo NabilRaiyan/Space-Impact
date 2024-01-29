@@ -39,8 +39,6 @@ class Player:
 
         self.bullets_list.append(bullet)
 
-
-
     def shoot(self):
         for bullet in self.bullets_list:
             bullet.forward(20)

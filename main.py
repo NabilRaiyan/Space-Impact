@@ -12,6 +12,7 @@ from scoreboardAndLevel import ScoreBoard
 from scoreboardAndLevel import Level
 from health import Health
 import math
+import pygame
 
 # initial game level
 game_level = 1
@@ -24,6 +25,12 @@ game_is_on = False
 show_menu = True
 menu_pen = None
 FONT = ("Comic sans", 20, 'bold')
+
+
+def play_sound(file_path):
+    pygame.mixer.init()
+    sound = pygame.mixer.Sound(file_path)
+    sound.play()
 
 def current_level():
     cr_level = Turtle()
@@ -62,6 +69,7 @@ def handle_click(x, y):
     global game_is_on, show_menu, menu_pen
     if show_menu:
         if 40 < y < 70:  # Start New Game
+            play_sound('sounds/click.mp3')
             show_menu = False
             hide_menu()
             game_is_on = True
@@ -95,23 +103,23 @@ def draw_game_element():
 
         players.shoot()
 
-        if score.score < 10:
+        if score.score < 50:
             enemy_img = 'assets/enemy1.gif'
             enemy.create_enemy(enemy_img)
 
 
-        elif score.score >= 20 and score.score <= 30:
+        elif score.score >= 50 and score.score <= 100:
             enemy_img = 'assets/enemy2.gif'
             enemy.create_enemy(enemy_img)
 
-        elif score.score > 30:
+        elif score.score > 100:
             enemy_img = 'assets/enemy1.gif'
             enemy_img = 'assets/enemy2.gif'
             enemy_img = 'assets/enemy3.gif'
             enemy.create_enemy(enemy_img)
         enemy.enemy_move()
         enemy.enemy_shoot()
-        if score.score > 100 and game_level == 1:
+        if score.score > 50 and game_level == 1:
             # for e in enemy.enemy_list:
             #     e.hideturtle()
             # enemy.enemy_list.clear()
@@ -196,7 +204,7 @@ def draw_game_element():
                 boss1.boss_hit_count += 1
                 score.score += 1
                 print(f'Boss hit count {boss1.boss_hit_count}')
-                if boss1.boss_hit_count > 20:
+                if boss1.boss_hit_count > 100:
                     boss1.boss.clear()
                     for bullet_boss in boss1.boss_bullet_list:
                         bullet_boss.hideturtle()

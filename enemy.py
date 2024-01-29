@@ -8,7 +8,7 @@ class Enemy:
         self.enemy_bullet_list = []
         self.enemy_movement = 2
         self.enemy_count = 0
-        self.totalEnemy = 100
+        self.totalEnemy = 500
 
     #creating enemy
     def create_enemy(self, enemy_img):
