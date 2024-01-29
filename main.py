@@ -1,6 +1,3 @@
-#TODO: Need to implement game sound
-#TODO: Fixing little error
-
 
 import time
 import turtle
