@@ -8,7 +8,7 @@ class Health:
             self.create_health(-300 + i*30, 220)
         print(self.health_list)
 
-
+    # create health
     def create_health(self, x, y):
         health = turtle.Turtle()
         turtle.register_shape('assets/health.gif')
@@ -17,6 +17,7 @@ class Health:
         health.goto(x, y)
         self.health_list.append(health)
 
+    #remove health
     def remove_health(self):
         if self.health_count > 0:
             self.health_count -= 1

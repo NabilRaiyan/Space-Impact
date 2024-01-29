@@ -23,12 +23,13 @@ show_menu = True
 menu_pen = None
 FONT = ("Comic sans", 20, 'bold')
 
-
+# function to play enu click sound
 def play_sound(file_path):
     pygame.mixer.init()
     sound = pygame.mixer.Sound(file_path)
     sound.play()
 
+# function to generate current level
 def current_level():
     cr_level = Turtle()
     cr_level.hideturtle()
@@ -93,6 +94,7 @@ def draw_game_element():
         time.sleep(0.01)
         screen.update()
 
+        # event listener
         screen.onkey(key="Up", fun=players.move_up)
         screen.onkey(key='Down', fun=players.move_down)
 
@@ -100,6 +102,7 @@ def draw_game_element():
 
         players.shoot()
 
+        # enemy generate logic
         if score.score < 50:
             enemy_img = 'assets/enemy1.gif'
             enemy.create_enemy(enemy_img)
@@ -226,7 +229,7 @@ screen.title("Space Impact")
 screen.setup(width=700, height=500)
 screen.bgcolor("#81BB7A")
 
-
+# draw menu options
 draw_menu()
 screen.onclick(handle_click)
 screen.mainloop()
