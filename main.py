@@ -214,7 +214,7 @@ def draw_game_element():
                     game_level += 1
                     boss1.boss_hit_count = 0
 
-
+# setting the game level
 if game_level == 1:
     boss_img = 'assets/boss1.gif'
     boss1 = Boss(boss_img)
