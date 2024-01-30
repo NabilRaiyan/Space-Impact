@@ -1,4 +1,7 @@
 
+#importing all the class
+
+
 import time
 import turtle
 from turtle import Screen, Turtle
@@ -14,6 +17,7 @@ import pygame
 # initial game level
 game_level = 1
 
+# Setting up the screen
 screen = Screen()
 screen.listen()
 screen.tracer(0)
