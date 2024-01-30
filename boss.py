@@ -1,5 +1,6 @@
 import turtle
 
+# initializing the boss
 FINISHING_LINE_X = 250
 SET_HEADING = 180
 MOVEMENT_SPEED = 1
@@ -17,11 +18,13 @@ class Boss:
         self.y_move = 16
         self.boss_hit_count = 0
 
+    # boss move function
     def boss_move(self):
         self.boss.forward(MOVEMENT_SPEED)
         if self.boss.xcor() < FINISHING_LINE_X:
             self.boss.goto(FINISHING_LINE_X, 0)
 
+    # creating boss bullet
     def boss_bullet(self, x, y):
         bullet = turtle.Turtle('square')
         bullet.penup()
@@ -31,6 +34,7 @@ class Boss:
         self.boss_bullet_list.append(bullet)
 
 
+    # boss shooting function
     def boss_shoot(self):
         for bullet in self.boss_bullet_list:
             bullet.setheading(180)
