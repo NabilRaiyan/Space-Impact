@@ -1,6 +1,6 @@
 import turtle
 
-# initializing the boss
+# initializing the boss variables
 FINISHING_LINE_X = 250
 SET_HEADING = 180
 MOVEMENT_SPEED = 1
