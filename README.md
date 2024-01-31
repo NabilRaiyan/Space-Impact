@@ -28,7 +28,7 @@ Git Clone: https://github.com/NabilRaiyan/Space-Impact.git
 ```
 4. Run the game using the following command:
 
-## Controls
+## Games Controls
 
 - **Up Arrow:** Move the spaceship up
 - **Down Arrow:** Move the spaceship down
