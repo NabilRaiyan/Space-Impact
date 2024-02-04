@@ -14,6 +14,7 @@ After each level, there is a boss fight where the player faces a tougher enemy.
 - Boss fights after every level.
 
 ## Requirements
+
 - Python 3.x
 - Turtle graphics module (usually comes pre-installed with Python)
 
