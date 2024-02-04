@@ -1,7 +1,6 @@
 # Nokia's 3310 Space Impact Game
 
 This is a Python implementation of the classic Nokia 3310 Space Impact game using the Turtle graphics module.
-
 ## Gameplay
 In this game, the player controls a spaceship and navigates through space, encountering enemy ships along the way. The player can move the spaceship up and down using the up and down arrow keys respectively. The player can shoot bullets at the enemy ships using the 's' key on the keyboard.
 
