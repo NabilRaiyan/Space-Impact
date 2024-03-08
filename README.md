@@ -27,6 +27,7 @@ After each level, there is a boss fight where the player faces a tougher enemy.
 Git Clone: https://github.com/NabilRaiyan/Space-Impact.git
 ```
 4. Run the game using the following command:
+
 ## Games Controls
 
 - **Up Arrow:** Move the spaceship up
